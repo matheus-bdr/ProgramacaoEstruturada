@@ -1,8 +1,10 @@
 #include <stdio.h>
-main() {
+main()
+{
 
     int num;
-   printf("\n insira seu numero: ");
-   scanf("%d",&num);
-   printf("%d",num);
+      printf("\n insira seu numero: ");
+    scanf("%d", &num);
+
+    printf("%d", num);
 }
