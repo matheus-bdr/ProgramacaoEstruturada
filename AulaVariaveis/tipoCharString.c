@@ -8,11 +8,10 @@
 */
 main()
 {
-
     char nome[50];
 
     printf("insira aqui um nome: ");
     scanf("%s",&nome);
-
+//possivel erro por apontamento
     printf("nome: %s" , nome);
 }
