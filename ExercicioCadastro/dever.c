@@ -1,7 +1,7 @@
 #include <stdio.h>
 main()
 {
-
+//isto é um comentário
     char nome[30];
     int idade;
     char matricula[30];
