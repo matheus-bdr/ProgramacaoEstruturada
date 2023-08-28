@@ -11,5 +11,5 @@ main()
         printf("Aluno aprovado");
     }else if(nota>=4 && nota<=6.9){
         printf("aluno de recuperacao");
-    }else{printf("Aluno de recu");}
+    }else{printf("Aluno reprovado");}
 }
