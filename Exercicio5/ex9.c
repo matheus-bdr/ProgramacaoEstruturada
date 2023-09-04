@@ -27,15 +27,20 @@ main()
     }
     else if (salario <= 1000 && tempo >= 1 && tempo <= 3)
     {
-        salario = salario+ (salario * 0.20);
+        salario = salario+ (salario * 0.20)+100;
     }
     else if (salario <= 1500 && tempo >= 4 && tempo <= 6)
     {
-        salario = salario+ (salario * 0.15);
+        salario = salario+ (salario * 0.15)+200;
     }
     else if (salario <= 2000 && tempo >= 7 && tempo <= 10)
     {
-        salario = salario+ (salario * 0.10);
+        salario = salario+ (salario * 0.10)+300;
+        
+    }else if(salario>2000 && tempo > 10){
+        salario = salario+ 500;
+    }else{
+        printf("funcionario nao sofreu reajuste");
     }
 
     printf("O seu salário com reajuste eh: %f", salario);
