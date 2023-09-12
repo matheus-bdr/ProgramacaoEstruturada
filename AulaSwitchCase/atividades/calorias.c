@@ -1,7 +1,7 @@
 #include <stdio.h>
 main()
 {
-   
+   //teste
     int calorias,pedido;
     printf("---------------------------------------------------");
     printf("\nInsira seu pedido: ");
