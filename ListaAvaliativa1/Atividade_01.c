@@ -7,7 +7,7 @@ main()
    scanf("%f",&x);
 
    funcao = ((5*x)+3)/sqrt((x*x)-16);
-   printf("O valor da funcao: %2.f", funcao);
+   printf("O valor da funcao: %.2f", funcao);
 
    return 0;
 }

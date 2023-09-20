@@ -8,9 +8,9 @@ main()
    serão necessários para que Zé seja maior que Chico */
 
    float alturaChico=1.50, alturaZe=1.10,  crescimentoChico = 0.02,crescimentoZe = 0.03;
-   int i=1,valor=100;
-   for (i=1;i<valor;i++){
-      if(alturaChico>alturaZe){
+   int i=0,valor=100;
+   for (i=0;i<valor;i++){
+      if(alturaChico>=alturaZe){
          alturaChico = alturaChico+crescimentoChico;
          alturaZe = alturaZe+crescimentoZe;
       }else
