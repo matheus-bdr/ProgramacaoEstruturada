@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <math.h>
+#include <limits.h>
+//int maior = INT_MIN, menor = INT_MAX;
 main()
 {
    float x, funcao; 
