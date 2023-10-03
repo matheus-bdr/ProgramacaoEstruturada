@@ -13,11 +13,15 @@ main()
    printf("insira o valor de C:");
    scanf("%d", &c);
 
-  /*  if (a != 0 && b != 0 && c != 0){
+    
       if(a==b && a==c&c==b){
-         printf("Triangulo equilatero pois todos os lados tem a mesma medida");
-      }else if (){}
-      else if (){}
-   }
-      return 0; */
+         printf("Triangulo equilatero pois todos os lados sao congruntes");
+      }else if (a!=b && a!=c && b!=c){
+         printf("Triangulo escaleno pois todos os lados sao diferentes");
+      }
+      else{
+         printf("Triangulo isoceles ");            
+      }
+
+      return 0; 
 }
