@@ -1,30 +1,48 @@
 #include <stdio.h>
+#include <string.h>
+//definição da struct/registro
+struct pessoa{ 
+        char nome[50];
+        int idade;
+        int cpf;
+        float salario;
+    };
 
-int recebeInteiro(int numeroInteiro);
-float recebeFloat(float numeroFloat);
-char recebeTexto(char valorTexto);
+//outra forma de declarar uma struct
+    typedef struct 
+    {
+        char rua[20];
+        int numero;
+    }Endereco;
+    
+
 
 main()
 {
-    int valor = recebeInteiro(valor);
-    printf("valor do inteiro: %d",valor);
-}
-//funcoes
-int recebeInteiro(int numeroInteiro)
-{
-    printf("Insira seu numero inteiro: ");
-    scanf("%d", &numeroInteiro);
-    return numeroInteiro;
-}
-float recebeFloat(float numeroFloat)
-{
-    printf("Insira seu numero Float: ");
-    scanf("%d", &numeroFloat);
-    return numeroFloat;
-}
-char recebeTexto(char valorTexto)
-{
-    printf("\n Digite um String: ");
-    fgets(valorTexto, 20, stdin);
-    return valorTexto;
+    //criar uma variavel do tipo da struct 
+    struct pessoa p1;
+    Endereco end;
+    
+    // inserindo dados no registro 
+    strcpy(p1.nome,"bedao");
+    p1.idade = 18;
+    p1.cpf = 101001;
+    p1.salario = 1800.00;
+
+    //mostrando valores 
+    printf("\n nome: %s", p1.nome);
+    printf("\n idade: %d", p1.idade);
+    printf("\n cpf: %d", p1.cpf);
+    printf("\n salario: %f", p1.salario);
+    
+
+    //usuario inserindo dados
+    printf("Digite a rua: ");
+    fgets(end.rua,sizeof(end.rua),stdin);
+
+    printf("Digite o numero: ");
+    scanf("%d",&end.numero);
+    fflush(stdin);
+    printf("\n Rua: %s",end.rua);
+    printf("\n Numero: %d", end.rua);
 }
