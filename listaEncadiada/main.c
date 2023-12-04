@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <time.h>
 
 typedef struct Pessoa
 {
@@ -17,7 +18,7 @@ Pessoa *criarListaVazia()
 
 Pessoa *criarNovaPessoa()
 {
-    Pessoa *novaPessoa = (Pessoa *)malloc(sizeof(Pessoa));
+    Pessoa *novaPessoa = (Pessoa* )malloc(sizeof(Pessoa));
     // validando se tem memória
     if (novaPessoa == NULL)
     {
@@ -54,7 +55,7 @@ Pessoa *cadastrar(Pessoa *lista)
     else
     {
         Pessoa *atual = lista;
-        while (atual->prox != NULL)
+        while (atual != NULL)
         {
             atual = atual->prox;
         }
@@ -132,7 +133,7 @@ main()
         case 3:
             printf("\nDigite o ID para busca: \n");
             scanf("%d", &idBusca);
-            encontrada = buscar(encontrada, idBusca);
+            encontrada = buscar(lista, idBusca);
             break;
             /*      case 4:
                       alterar();
