@@ -5,11 +5,10 @@
 typedef struct Produto
 {
     char descricao[50];
-    // int id;
     int codigo;
     int quantidade;
     float valorProduto;
-    struct Produto *prox; // ponteiro que armazena o endereco do proxima pessoa
+    struct Produto *prox; 
 } Produto;
 
 Produto *criarListaVazia()
@@ -17,7 +16,7 @@ Produto *criarListaVazia()
     return NULL;
 }
 
-// funcao para criar um novo registro
+
 Produto *criarProduto()
 {
     Produto *novoProduto = (Produto *)malloc(sizeof(Produto));
@@ -47,7 +46,6 @@ Produto *cadastrar(Produto *lista)
 
     printf("Digite o valor do produto: ");
     scanf("%f", &novoProduto->valorProduto);
-    // verificar se a lista é nula
     if (lista == NULL)
     {
         return novoProduto;
@@ -58,10 +56,9 @@ Produto *cadastrar(Produto *lista)
         while (atual->prox != NULL)
         {
             atual = atual->prox;
-            // sai da repeticao quanto encontrar o elemento que aponta pra NULL
         }
         atual->prox = novoProduto;
-        return lista; // atualizar a lista
+        return lista; 
     }
 }
 void mostrarLista(Produto *lista)
@@ -76,7 +73,7 @@ void mostrarLista(Produto *lista)
     {
         while (atual != NULL)
         {
-            // printf("\nId: %d", atual->id);
+
             printf("\nDescricao: %s", atual->descricao);
             printf("Quantidade: %d", atual->quantidade);
             printf("\nCodigo: %d", atual->codigo);
@@ -93,7 +90,7 @@ Produto *buscarProduto(Produto *lista, int idBusca)
     {
         if (atual->codigo == idBusca)
         {
-            // printf("\nId: %d", atual->id);
+         
             printf("\nDescricao: %s", atual->descricao);
             printf("Quantidade: %d", atual->quantidade);
             printf("\nCodigo: %d", atual->codigo);
@@ -129,19 +126,17 @@ Produto *excluir(Produto *lista, int idBusca)
 
     while (atual != NULL && atual->codigo != idBusca)
     {
-        anterior = atual; // atencao, aqui a ordem de declaracao importa (esse era nosso problema na exclusao)
+        anterior = atual; 
         atual = atual->prox;
     }
     if (atual != NULL)
     {
         if (anterior != NULL)
         {
-            // exclusão alguem depois da maria
             anterior->prox = atual->prox;
         }
         else
         {
-            // excluir a maria (primeiro da lista)
             lista = atual->prox;
         }
         free(atual);
@@ -170,8 +165,8 @@ int main()
 {
     int opcao;
     int idBusca;
-    Produto *encontrada;                // armazenar a pessoa encontrada para excluir ou alterar
-    Produto *lista = criarListaVazia(); // sempre vai ser o primeiro da lista
+    Produto *encontrada;                
+    Produto *lista = criarListaVazia(); 
     do
     {
         printf("\n=========================");
